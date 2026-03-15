@@ -157,7 +157,7 @@
   {
     "id": 4, "round": 4, "name": "Bahrain Grand Prix", "nameEs": "Gran Premio de Baréin",
     "circuit": "Bahrain International Circuit", "location": "Sakhir, Baréin", "flag": "🇧🇭",
-    "status": "suspended",
+    "status": "postponed",
     "sessions": {
       "fp1": { "date": "2026-04-10", "time": "13:30" },
       "fp2": { "date": "2026-04-10", "time": "17:00" },
@@ -170,7 +170,7 @@
   {
     "id": 5, "round": 5, "name": "Saudi Arabian Grand Prix", "nameEs": "Gran Premio de Arabia Saudí",
     "circuit": "Jeddah Corniche Circuit", "location": "Jeddah, Arabia Saudí", "flag": "🇸🇦",
-    "status": "suspended",
+    "status": "postponed",
     "sessions": {
       "fp1": { "date": "2026-04-17", "time": "15:30" },
       "fp2": { "date": "2026-04-17", "time": "19:00" },
