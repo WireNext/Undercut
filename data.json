@@ -1,5 +1,5 @@
 {
-  "season": 2025,
+  "season": 2026,
   "pointsSystem": {
     "race": [25, 18, 15, 12, 10, 8, 6, 4, 2, 1],
     "sprint": [8, 7, 6, 5, 4, 3, 2, 1]
@@ -17,7 +17,7 @@
   { "id": "alpine", "name": "BWT Alpine F1 Team", "color": "#FF87BC", "secondaryColor": "#0090FF", "nationality": "French" },
   { "id": "cadillac", "name": "Cadillac F1 Team", "color": "#FFD700", "secondaryColor": "#00205B", "nationality": "American" }
 ],
-  "drivers": "drivers": [
+  "drivers": [
     { "id": "norris", "name": "Lando Norris", "shortName": "NOR", "number": 4, "team": "mclaren", "nationality": "British", "flag": "🇬🇧" },
     { "id": "verstappen", "name": "Max Verstappen", "shortName": "VER", "number": 1, "team": "red_bull", "nationality": "Dutch", "flag": "🇳🇱" },
     { "id": "bortoleto", "name": "Gabriel Bortoleto", "shortName": "BOR", "number": 5, "team": "audi", "nationality": "Brazilian", "flag": "🇧🇷" },
