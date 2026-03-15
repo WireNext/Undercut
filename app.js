@@ -4,7 +4,7 @@
 
 // ─── State ───────────────────────────────────
 let DATA = null;
-let currentLang = 'en';
+let currentLang = localStorage.getItem('undercut_lang') || 'es';
 let currentFilter = 'all';
 let currentModalRace = null;
 let currentModalTab = 'sessions';
@@ -112,6 +112,11 @@ async function init() {
   try {
     const res = await fetch('data.json');
     DATA = await res.json();
+    // Apply saved/default language to toggle UI before first render
+    document.querySelectorAll('.lang-option').forEach(o =>
+      o.classList.toggle('active', o.dataset.lang === currentLang)
+    );
+    applyLang();
     buildTicker();
     renderCalendar();
     renderDriverStandings();
@@ -616,6 +621,7 @@ function bindLang() {
     const opt = e.target.closest('.lang-option');
     if (!opt) return;
     currentLang = opt.dataset.lang;
+    localStorage.setItem('undercut_lang', currentLang);
     document.querySelectorAll('.lang-option').forEach(o => o.classList.toggle('active', o.dataset.lang === currentLang));
     applyLang();
     renderCalendar();
