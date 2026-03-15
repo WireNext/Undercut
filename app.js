@@ -458,69 +458,65 @@ function calcConstructorStandings() {
 function renderDriverStandings() {
   const standings = calcDriverStandings();
   const maxPts = standings[0]?.points || 1;
-
-  // Build race dot map
   const completedRaces = DATA.calendar.filter(r => r.status === 'completed');
 
   const rows = standings.map((s, idx) => {
     const drv = DATA.drivers.find(d => d.id === s.driverId);
-    const team = DATA.teams.find(t => t.id === drv.team);
+    const team = DATA.teams.find(tm => tm.id === drv.team);
     const pos = idx + 1;
     const posClass = pos <= 3 ? `pos-${pos}` : '';
-    const gap = idx === 0 ? '' : `− ${standings[0].points - s.points} pts`;
+    const gapHTML = idx === 0
+      ? '<span class="st-leader-badge">LEADER</span>'
+      : `<span class="st-gap">−${standings[0].points - s.points}</span>`;
 
     const dots = completedRaces.map(race => {
-      let p = null, isFinished = false;
+      let statusLabel = '—', isFinished = false, p = null;
       if (race.raceResult) {
         const r = race.raceResult.find(r => r.driver === drv.id);
-        if (r) { p = r.position; isFinished = r.status === 'finished'; }
+        if (r) { p = r.position; isFinished = r.status === 'finished'; statusLabel = isFinished ? `P${p}` : r.status; }
       }
-      const color = isFinished ? posColor(p) : 'rgba(100,100,100,0.3)';
-      const label = p ? (isFinished ? `P${p}` : (race.raceResult.find(r=>r.driver===drv.id)?.status || '?')) : '—';
+      const bg = isFinished ? posColor(p) : (p ? 'rgba(232,0,45,0.25)' : 'rgba(80,80,100,0.3)');
+      const fg = isFinished && p <= 3 ? '#000' : '#fff';
       const raceName = currentLang === 'es' ? race.nameEs : race.name;
-      return `<div class="race-dot" style="background:${color};color:${isFinished && p<=3?'#000':'#fff'}">
-        ${label}
-        <div class="race-dot-tooltip">${raceName}: ${label}</div>
-      </div>`;
+      return `<div class="race-dot" style="background:${bg};color:${fg}" title="${raceName}: ${statusLabel}">${statusLabel}</div>`;
     }).join('');
 
     return `<tr class="${posClass}">
-      <td><span class="st-pos">${pos}</span></td>
-      <td>
-        <div class="st-driver-wrap">
-          <div class="st-team-bar" style="background:${team.color}"></div>
+      <td class="td-pos"><span class="st-pos">${pos}</span></td>
+      <td class="td-entity">
+        <div class="st-entity-row">
+          <div class="st-color-bar" style="background:${team.color}"></div>
           <div class="st-num">${drv.number}</div>
-          <div>
+          <div class="st-info">
             <div class="st-name">${drv.flag} ${drv.name}</div>
-            <div class="st-team">${team.name}</div>
+            <div class="st-sub">${team.name}</div>
           </div>
         </div>
       </td>
-      <td class="st-race-dots">${dots}</td>
-      <td>
-        <div class="st-pts-big">${s.points}</div>
+      <td class="td-dots"><div class="dots-wrap">${dots}</div></td>
+      <td class="td-pts">
+        <span class="st-pts-big">${s.points}</span>
         <span class="st-pts-label">pts</span>
       </td>
-      <td><span class="st-gap">${gap}</span></td>
+      <td class="td-gap">${gapHTML}</td>
     </tr>`;
   }).join('');
 
   document.getElementById('driversTable').innerHTML = `
     <thead><tr>
-      <th>${t('pos')}</th>
-      <th>${t('driver')}</th>
-      <th class="st-race-dots" style="min-width:120px">Results</th>
-      <th style="text-align:right">${t('points')}</th>
-      <th>${t('gap')}</th>
+      <th class="td-pos">${t('pos')}</th>
+      <th class="td-entity">${t('driver')}</th>
+      <th class="td-dots">Results</th>
+      <th class="td-pts th-right">${t('points')}</th>
+      <th class="td-gap th-right">${t('gap')}</th>
     </tr></thead>
     <tbody>${rows}</tbody>`;
 
-  // Chart
   const top10 = standings.slice(0, 10);
   renderBarChart('driversChart', top10.map(s => {
     const d = DATA.drivers.find(dr => dr.id === s.driverId);
-    const team = DATA.teams.find(t => t.id === d.team);
-    return { label: d.shortName, points: s.points, color: team.color };
+    const tm = DATA.teams.find(tm => tm.id === d.team);
+    return { label: d.shortName, points: s.points, color: tm.color };
   }), maxPts, t('top10_chart'));
 }
 
@@ -530,46 +526,48 @@ function renderConstructorStandings() {
   const maxPts = standings[0]?.points || 1;
 
   const rows = standings.map((s, idx) => {
-    const team = DATA.teams.find(t => t.id === s.teamId);
+    const team = DATA.teams.find(tm => tm.id === s.teamId);
     const pos = idx + 1;
     const posClass = pos <= 3 ? `pos-${pos}` : '';
-    const gap = idx === 0 ? '' : `− ${standings[0].points - s.points} pts`;
+    const gapHTML = idx === 0
+      ? '<span class="st-leader-badge">LEADER</span>'
+      : `<span class="st-gap">−${standings[0].points - s.points}</span>`;
     const teamDrivers = DATA.drivers.filter(d => d.team === team.id);
-    const driverNames = teamDrivers.map(d => d.shortName).join(' · ');
+    const pills = teamDrivers.map(d =>
+      `<span class="driver-pill" style="color:${team.color};border-color:${team.color}">${d.flag} ${d.shortName}</span>`
+    ).join('');
 
     return `<tr class="${posClass}">
-      <td><span class="st-pos">${pos}</span></td>
-      <td>
-        <div class="st-constructors-wrap">
-          <div class="st-team-logo-bar" style="background:${team.color}"></div>
-          <div>
-            <div class="st-team-name">${team.name}</div>
-            <div class="st-team-nat">${team.nationality}</div>
-            <div class="st-team-drivers">${driverNames}</div>
+      <td class="td-pos"><span class="st-pos">${pos}</span></td>
+      <td class="td-entity">
+        <div class="st-entity-row">
+          <div class="st-color-bar" style="background:${team.color}"></div>
+          <div class="st-info">
+            <div class="st-name">${team.name}</div>
+            <div class="st-sub">${team.nationality} · ${pills}</div>
           </div>
         </div>
       </td>
-      <td>
-        <div class="st-pts-big">${s.points}</div>
+      <td class="td-pts">
+        <span class="st-pts-big">${s.points}</span>
         <span class="st-pts-label">pts</span>
       </td>
-      <td><span class="st-gap">${gap}</span></td>
+      <td class="td-gap">${gapHTML}</td>
     </tr>`;
   }).join('');
 
   document.getElementById('constructorsTable').innerHTML = `
     <thead><tr>
-      <th>${t('pos')}</th>
-      <th>${t('team')}</th>
-      <th style="text-align:right">${t('points')}</th>
-      <th>${t('gap')}</th>
+      <th class="td-pos">${t('pos')}</th>
+      <th class="td-entity">${t('team')}</th>
+      <th class="td-pts th-right">${t('points')}</th>
+      <th class="td-gap th-right">${t('gap')}</th>
     </tr></thead>
     <tbody>${rows}</tbody>`;
 
-  // Chart
   renderBarChart('constructorsChart', standings.map(s => {
-    const team = DATA.teams.find(t => t.id === s.teamId);
-    return { label: team.name.split(' ')[0], points: s.points, color: team.color };
+    const tm = DATA.teams.find(tm => tm.id === s.teamId);
+    return { label: tm.name.split(' ')[0], points: s.points, color: tm.color };
   }), maxPts, t('constructors_champ'));
 }
 
