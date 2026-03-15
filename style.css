@@ -1,5 +1,5 @@
 /* =============================================
-   UNDERCUT — F1 2026
+   UNDERCUT — F1 2025
    Design: Dark motorsport, editorial grid
    ============================================= */
 
@@ -993,22 +993,127 @@ body {
 }
 
 /* =============================================
-   RESPONSIVE
+   RESPONSIVE — Mobile first
    ============================================= */
-@media (max-width: 768px) {
-  .header-inner { gap: 16px; }
-  .logo-season { display: none; }
-  .section-title { font-size: 38px; }
-  .calendar-grid { grid-template-columns: 1fr; }
-  .sessions-grid { grid-template-columns: 1fr; }
-  .modal-box { max-width: 100%; }
-  .modal-title { font-size: 28px; }
-  .st-race-dots { display: none; }
+
+/* Prevent horizontal overflow globally */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
+/* ── 768px and below ── */
+@media (max-width: 768px) {
+
+  /* Header: stack logo+lang on row 1, nav on row 2 */
+  .header-inner {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px 14px 0;
+    gap: 0;
+  }
+
+  .logo-wrap { flex: 1; padding-bottom: 10px; }
+  .logo-season { display: none; }
+  .logo-text { font-size: 22px; }
+  .logo-icon { font-size: 18px; }
+  .header-right { padding-bottom: 10px; }
+
+  /* Nav: full-width scrollable strip on second row */
+  .main-nav {
+    order: 3;
+    width: 100%;
+    border-top: 1px solid var(--border);
+    padding: 6px 0 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 2px;
+    flex-shrink: 0;
+  }
+  .main-nav::-webkit-scrollbar { display: none; }
+  .nav-btn { white-space: nowrap; font-size: 12px; padding: 6px 12px; flex-shrink: 0; }
+
+  /* Layout */
+  .site-main { padding: 20px 14px; }
+  .section-title { font-size: 32px; }
+  .section-header { margin-bottom: 20px; }
+
+  /* Calendar */
+  .calendar-grid { grid-template-columns: 1fr; gap: 12px; }
+
+  /* Modal: bottom sheet */
+  .modal-overlay { padding: 0; align-items: flex-end; }
+  .modal-box {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    max-height: 92vh;
+    overflow-y: auto;
+    animation: slideUpMobile 0.3s ease;
+  }
+  @keyframes slideUpMobile {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+  .modal-header { padding: 20px 16px 16px; }
+  .modal-body { padding: 16px 16px 32px; }
+  .modal-title { font-size: 26px; }
+  .modal-close { top: 14px; right: 14px; }
+
+  /* Sessions grid */
+  .sessions-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+
+  /* Result table: hide team on mobile */
+  .col-team { display: none; }
+  .result-table td, .result-table th { padding: 8px 7px; }
+  .rt-name { font-size: 12px; }
+  .rt-short { font-size: 9px; }
+  .rt-pts { font-size: 13px; }
+  .rt-team-bar { height: 24px; }
+  .rt-pos { font-size: 15px; min-width: 22px; }
+
+  /* Standings */
+  .standings-wrap { grid-template-columns: 1fr; }
+  .standings-chart { position: static; }
+  .st-race-dots { display: none; }
+  .standings-table td, .standings-table th { padding: 8px 8px; }
+  .st-pos { font-size: 18px; width: 28px; }
+  .st-name { font-size: 13px; }
+  .st-team { font-size: 10px; }
+  .st-num { font-size: 15px; min-width: 22px; }
+  .st-pts-big { font-size: 20px; }
+  .st-team-bar { height: 28px; }
+
+  /* Footer */
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 6px; padding: 16px 14px; }
+  .footer-season { text-align: left; }
+}
+
+/* ── 480px and below ── */
 @media (max-width: 480px) {
-  .main-nav .nav-btn { padding: 5px 8px; font-size: 11px; }
-  .site-main { padding: 24px 14px; }
+  .logo-text { font-size: 20px; }
+
+  /* Sessions: single column */
+  .sessions-grid { grid-template-columns: 1fr; }
+
+  /* Cards compact */
+  .card-body { padding: 14px 14px; }
+  .card-name { font-size: 18px; }
+  .card-badges { flex-wrap: wrap; gap: 3px; }
+
+  /* Result table: also hide status on tiny screens */
+  .col-status { display: none; }
+
+  /* Modal tabs scrollable */
+  .modal-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+  }
+  .modal-tabs::-webkit-scrollbar { display: none; }
+  .modal-tab { white-space: nowrap; flex-shrink: 0; }
 }
 
 /* =============================================

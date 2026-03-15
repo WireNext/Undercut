@@ -1,5 +1,5 @@
 /* =============================================
-   UNDERCUT — F1 2026 — app.js
+   UNDERCUT — F1 2025 — app.js
    ============================================= */
 
 // ─── State ───────────────────────────────────
@@ -384,9 +384,9 @@ function buildResultTable(results, type) {
           </div>
         </div>
       </td>
-      <td style="color:var(--text-2);font-size:12px">${team.name}</td>
+      <td class="col-team" style="color:var(--text-2);font-size:12px">${team.name}</td>
       <td><span class="rt-pts">${pts > 0 ? pts : '—'}</span></td>
-      <td>${statusHTML}</td>
+      <td class="col-status">${statusHTML}</td>
     </tr>`;
   }).join('');
   return `<div class="result-table-wrap">
@@ -395,9 +395,9 @@ function buildResultTable(results, type) {
         <tr>
           <th>${t('pos')}</th>
           <th>${t('driver')}</th>
-          <th>${t('team')}</th>
+          <th class="col-team">${t('team')}</th>
           <th>${t('points')}</th>
-          <th>${t('status')}</th>
+          <th class="col-status">${t('status')}</th>
         </tr>
       </thead>
       <tbody>${rows}</tbody>
