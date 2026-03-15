@@ -39,11 +39,10 @@
     { "id": "ocon", "name": "Esteban Ocon", "shortName": "OCO", "number": 31, "team": "haas", "nationality": "French", "flag": "🇫🇷" }
   ],
   "calendar": [
-    [
   {
     "id": 1, "round": 1, "name": "Australian Grand Prix", "nameEs": "Gran Premio de Australia",
     "circuit": "Albert Park", "location": "Melbourne, Australia", "flag": "🇦🇺",
-    "status": "upcoming",
+    "status": "completed",
     "sessions": {
       "fp1": { "date": "2026-03-06", "time": "02:30" },
       "fp2": { "date": "2026-03-06", "time": "06:00" },
@@ -81,7 +80,7 @@
   {
     "id": 2, "round": 2, "name": "Chinese Grand Prix", "nameEs": "Gran Premio de China",
     "circuit": "Shanghai International Circuit", "location": "Shanghai, China", "flag": "🇨🇳",
-    "status": "upcoming",
+    "status": "completed",
     "sessions": {
       "fp1": { "date": "2026-03-13", "time": "04:30" },
       "sprintQualifying": { "date": "2026-03-13", "time": "08:30" },
@@ -426,5 +425,4 @@
     "hasSprint": false, "raceResult": [], "sprintResult": []
   }
 ]
-  ]
 }
