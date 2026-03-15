@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNDERCUT — F1 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">UNDERCUT</span>
+        <span class="logo-season">F1 · 2025</span>
+      </div>
+      <nav class="main-nav">
+        <button class="nav-btn active" data-section="calendar" data-en="Calendar" data-es="Calendario">Calendar</button>
+        <button class="nav-btn" data-section="drivers" data-en="Drivers" data-es="Pilotos">Drivers</button>
+        <button class="nav-btn" data-section="constructors" data-en="Constructors" data-es="Constructores">Constructors</button>
+      </nav>
+      <div class="header-right">
+        <button class="lang-toggle" id="langToggle">
+          <span class="lang-option active" data-lang="en">EN</span>
+          <span class="lang-sep">/</span>
+          <span class="lang-option" data-lang="es">ES</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- TICKER -->
+  <div class="ticker-bar">
+    <div class="ticker-track" id="tickerTrack">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="site-main">
+
+    <!-- CALENDAR SECTION -->
+    <section class="section active" id="section-calendar">
+      <div class="section-header">
+        <h1 class="section-title" data-en="2025 Season Calendar" data-es="Calendario Temporada 2025">2025 Season Calendar</h1>
+        <div class="filter-row">
+          <button class="filter-btn active" data-filter="all" data-en="All Races" data-es="Todas">All Races</button>
+          <button class="filter-btn" data-filter="completed" data-en="Completed" data-es="Disputadas">Completed</button>
+          <button class="filter-btn" data-filter="upcoming" data-en="Upcoming" data-es="Próximas">Upcoming</button>
+          <button class="filter-btn" data-filter="sprint" data-en="Sprint Weekends" data-es="Sprint">Sprint Weekends</button>
+        </div>
+      </div>
+      <div class="calendar-grid" id="calendarGrid">
+        <!-- Filled by JS -->
+      </div>
+    </section>
+
+    <!-- RACE DETAIL MODAL -->
+    <div class="modal-overlay" id="raceModal">
+      <div class="modal-box">
+        <button class="modal-close" id="modalClose">✕</button>
+        <div class="modal-content" id="modalContent">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- DRIVERS SECTION -->
+    <section class="section" id="section-drivers">
+      <div class="section-header">
+        <h1 class="section-title" data-en="Drivers' Championship" data-es="Campeonato de Pilotos">Drivers' Championship</h1>
+      </div>
+      <div class="standings-wrap">
+        <div class="standings-table-wrap">
+          <table class="standings-table" id="driversTable">
+            <!-- Filled by JS -->
+          </table>
+        </div>
+        <div class="standings-chart" id="driversChart">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CONSTRUCTORS SECTION -->
+    <section class="section" id="section-constructors">
+      <div class="section-header">
+        <h1 class="section-title" data-en="Constructors' Championship" data-es="Campeonato de Constructores">Constructors' Championship</h1>
+      </div>
+      <div class="standings-wrap">
+        <div class="standings-table-wrap">
+          <table class="standings-table" id="constructorsTable">
+            <!-- Filled by JS -->
+          </table>
+        </div>
+        <div class="standings-chart" id="constructorsChart">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">⬡ UNDERCUT</span>
+      <span class="footer-note" data-en="Fan-made. Not affiliated with Formula 1." data-es="Hecho por fans. No afiliado con la Fórmula 1.">Fan-made. Not affiliated with Formula 1.</span>
+      <span class="footer-season">2025 FIA Formula One World Championship</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,430 @@
+{
+  "season": 2025,
+  "pointsSystem": {
+    "race": [25, 18, 15, 12, 10, 8, 6, 4, 2, 1],
+    "sprint": [8, 7, 6, 5, 4, 3, 2, 1]
+  },
+  "teams": [
+    { "id": "red_bull", "name": "Red Bull Racing", "color": "#3671C6", "secondaryColor": "#CC1E4A", "nationality": "Austrian" },
+    { "id": "ferrari", "name": "Scuderia Ferrari", "color": "#E8002D", "secondaryColor": "#FFCC00", "nationality": "Italian" },
+    { "id": "mercedes", "name": "Mercedes-AMG Petronas", "color": "#27F4D2", "secondaryColor": "#1A1A1A", "nationality": "German" },
+    { "id": "mclaren", "name": "McLaren Formula 1 Team", "color": "#FF8000", "secondaryColor": "#0097C4", "nationality": "British" },
+    { "id": "aston_martin", "name": "Aston Martin Aramco", "color": "#229971", "secondaryColor": "#CECE00", "nationality": "British" },
+    { "id": "alpine", "name": "BWT Alpine F1 Team", "color": "#FF87BC", "secondaryColor": "#0090FF", "nationality": "French" },
+    { "id": "williams", "name": "Williams Racing", "color": "#64C4FF", "secondaryColor": "#041E3A", "nationality": "British" },
+    { "id": "rb", "name": "Visa Cash App RB F1 Team", "color": "#6692FF", "secondaryColor": "#C8001A", "nationality": "Italian" },
+    { "id": "kick_sauber", "name": "Stake F1 Team Kick Sauber", "color": "#52E252", "secondaryColor": "#1C1C1C", "nationality": "Swiss" },
+    { "id": "haas", "name": "MoneyGram Haas F1 Team", "color": "#B6BABD", "secondaryColor": "#E8002D", "nationality": "American" }
+  ],
+  "drivers": [
+    { "id": "verstappen", "name": "Max Verstappen", "shortName": "VER", "number": 1, "team": "red_bull", "nationality": "Dutch", "flag": "🇳🇱" },
+    { "id": "lawson", "name": "Liam Lawson", "shortName": "LAW", "number": 30, "team": "red_bull", "nationality": "New Zealander", "flag": "🇳🇿" },
+    { "id": "leclerc", "name": "Charles Leclerc", "shortName": "LEC", "number": 16, "team": "ferrari", "nationality": "Monegasque", "flag": "🇲🇨" },
+    { "id": "hamilton", "name": "Lewis Hamilton", "shortName": "HAM", "number": 44, "team": "ferrari", "nationality": "British", "flag": "🇬🇧" },
+    { "id": "russell", "name": "George Russell", "shortName": "RUS", "number": 63, "team": "mercedes", "nationality": "British", "flag": "🇬🇧" },
+    { "id": "antonelli", "name": "Kimi Antonelli", "shortName": "ANT", "number": 12, "team": "mercedes", "nationality": "Italian", "flag": "🇮🇹" },
+    { "id": "norris", "name": "Lando Norris", "shortName": "NOR", "number": 4, "team": "mclaren", "nationality": "British", "flag": "🇬🇧" },
+    { "id": "piastri", "name": "Oscar Piastri", "shortName": "PIA", "number": 81, "team": "mclaren", "nationality": "Australian", "flag": "🇦🇺" },
+    { "id": "alonso", "name": "Fernando Alonso", "shortName": "ALO", "number": 14, "team": "aston_martin", "nationality": "Spanish", "flag": "🇪🇸" },
+    { "id": "stroll", "name": "Lance Stroll", "shortName": "STR", "number": 18, "team": "aston_martin", "nationality": "Canadian", "flag": "🇨🇦" },
+    { "id": "gasly", "name": "Pierre Gasly", "shortName": "GAS", "number": 10, "team": "alpine", "nationality": "French", "flag": "🇫🇷" },
+    { "id": "doohan", "name": "Jack Doohan", "shortName": "DOO", "number": 7, "team": "alpine", "nationality": "Australian", "flag": "🇦🇺" },
+    { "id": "albon", "name": "Alexander Albon", "shortName": "ALB", "number": 23, "team": "williams", "nationality": "Thai", "flag": "🇹🇭" },
+    { "id": "sainz", "name": "Carlos Sainz Jr.", "shortName": "SAI", "number": 55, "team": "williams", "nationality": "Spanish", "flag": "🇪🇸" },
+    { "id": "tsunoda", "name": "Yuki Tsunoda", "shortName": "TSU", "number": 22, "team": "rb", "nationality": "Japanese", "flag": "🇯🇵" },
+    { "id": "hadjar", "name": "Isack Hadjar", "shortName": "HAD", "number": 6, "team": "rb", "nationality": "French", "flag": "🇫🇷" },
+    { "id": "hulkenberg", "name": "Nico Hülkenberg", "shortName": "HUL", "number": 27, "team": "kick_sauber", "nationality": "German", "flag": "🇩🇪" },
+    { "id": "bortoleto", "name": "Gabriel Bortoleto", "shortName": "BOR", "number": 5, "team": "kick_sauber", "nationality": "Brazilian", "flag": "🇧🇷" },
+    { "id": "bearman", "name": "Oliver Bearman", "shortName": "BEA", "number": 87, "team": "haas", "nationality": "British", "flag": "🇬🇧" },
+    { "id": "ocon", "name": "Esteban Ocon", "shortName": "OCO", "number": 31, "team": "haas", "nationality": "French", "flag": "🇫🇷" }
+  ],
+  "calendar": [
+    [
+  {
+    "id": 1, "round": 1, "name": "Australian Grand Prix", "nameEs": "Gran Premio de Australia",
+    "circuit": "Albert Park", "location": "Melbourne, Australia", "flag": "🇦🇺",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-03-06", "time": "02:30" },
+      "fp2": { "date": "2026-03-06", "time": "06:00" },
+      "fp3": { "date": "2026-03-07", "time": "02:30" },
+      "qualifying": { "date": "2026-03-07", "time": "06:00" },
+      "race": { "date": "2026-03-08", "time": "05:00" }
+    },
+    "hasSprint": false, 
+    "raceResult": [
+      { "driver": "russell", "position": 1, "status": "finished" },
+      { "driver": "antonelli", "position": 2, "status": "finished" },
+      { "driver": "leclerc", "position": 3, "status": "finished" },
+      { "driver": "hamilton", "position": 4, "status": "finished" },
+      { "driver": "norris", "position": 5, "status": "finished" },
+      { "driver": "verstappen", "position": 6, "status": "finished" },
+      { "driver": "bearman", "position": 7, "status": "finished" },
+      { "driver": "lindblad", "position": 8, "status": "finished" },
+      { "driver": "bortoleto", "position": 9, "status": "finished" },
+      { "driver": "gasly", "position": 10, "status": "finished" },
+      { "driver": "ocon", "position": 11, "status": "finished" },
+      { "driver": "albon", "position": 12, "status": "finished" },
+      { "driver": "lawson", "position": 13, "status": "finished" },
+      { "driver": "colapinto", "position": 14, "status": "finished" },
+      { "driver": "sainz", "position": 15, "status": "finished" },
+      { "driver": "perez", "position": 16, "status": "finished" },
+      { "driver": "stroll", "position": 17, "status": "NC" },
+      { "driver": "alonso", "position": 18, "status": "DNF" },
+      { "driver": "bottas", "position": 19, "status": "DNF" },
+      { "driver": "hadjar", "position": 20, "status": "DNF" },
+      { "driver": "piastri", "position": 21, "status": "DNS" },
+      { "driver": "hulkenberg", "position": 22, "status": "DNS" }
+    ], 
+    "sprintResult": []
+  },
+  {
+    "id": 2, "round": 2, "name": "Chinese Grand Prix", "nameEs": "Gran Premio de China",
+    "circuit": "Shanghai International Circuit", "location": "Shanghai, China", "flag": "🇨🇳",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-03-13", "time": "04:30" },
+      "sprintQualifying": { "date": "2026-03-13", "time": "08:30" },
+      "sprint": { "date": "2026-03-14", "time": "04:00" },
+      "qualifying": { "date": "2026-03-14", "time": "08:00" },
+      "race": { "date": "2026-03-15", "time": "08:00" }
+    },
+    "hasSprint": true, 
+    "raceResult": [
+      { "driver": "antonelli", "position": 1, "status": "finished" },
+      { "driver": "russell", "position": 2, "status": "finished" },
+      { "driver": "hamilton", "position": 3, "status": "finished" },
+      { "driver": "leclerc", "position": 4, "status": "finished" },
+      { "driver": "bearman", "position": 5, "status": "finished" },
+      { "driver": "gasly", "position": 6, "status": "finished" },
+      { "driver": "lawson", "position": 7, "status": "finished" },
+      { "driver": "hadjar", "position": 8, "status": "finished" },
+      { "driver": "sainz", "position": 9, "status": "finished" },
+      { "driver": "colapinto", "position": 10, "status": "finished" },
+      { "driver": "hulkenberg", "position": 11, "status": "finished" },
+      { "driver": "lindblad", "position": 12, "status": "finished" },
+      { "driver": "bottas", "position": 13, "status": "finished" },
+      { "driver": "ocon", "position": 14, "status": "finished" },
+      { "driver": "perez", "position": 15, "status": "finished" },
+      { "driver": "verstappen", "position": 16, "status": "DNF" },
+      { "driver": "alonso", "position": 17, "status": "DNF" },
+      { "driver": "stroll", "position": 18, "status": "DNF" },
+      { "driver": "piastri", "position": 19, "status": "DNS" },
+      { "driver": "norris", "position": 20, "status": "DNS" },
+      { "driver": "bortoleto", "position": 21, "status": "DNS" },
+      { "driver": "albon", "position": 22, "status": "DNS" }
+    ], 
+    "sprintResult": [
+      { "driver": "russell", "position": 1, "status": "finished" },
+      { "driver": "leclerc", "position": 2, "status": "finished" },
+      { "driver": "hamilton", "position": 3, "status": "finished" },
+      { "driver": "norris", "position": 4, "status": "finished" },
+      { "driver": "antonelli", "position": 5, "status": "finished" },
+      { "driver": "piastri", "position": 6, "status": "finished" },
+      { "driver": "lawson", "position": 7, "status": "finished" },
+      { "driver": "bearman", "position": 8, "status": "finished" },
+      { "driver": "verstappen", "position": 9, "status": "finished" },
+      { "driver": "ocon", "position": 10, "status": "finished" },
+      { "driver": "gasly", "position": 11, "status": "finished" },
+      { "driver": "sainz", "position": 12, "status": "finished" },
+      { "driver": "bortoleto", "position": 13, "status": "finished" },
+      { "driver": "colapinto", "position": 14, "status": "finished" },
+      { "driver": "hadjar", "position": 15, "status": "finished" },
+      { "driver": "albon", "position": 16, "status": "finished" },
+      { "driver": "alonso", "position": 17, "status": "finished" },
+      { "driver": "stroll", "position": 18, "status": "finished" },
+      { "driver": "perez", "position": 19, "status": "finished" },
+      { "driver": "hulkenberg", "position": 20, "status": "DNF" },
+      { "driver": "bottas", "position": 21, "status": "DNF" },
+      { "driver": "lindblad", "position": 22, "status": "DNF" }
+    ]
+  },
+  {
+    "id": 3, "round": 3, "name": "Japanese Grand Prix", "nameEs": "Gran Premio de Japón",
+    "circuit": "Suzuka International Racing Course", "location": "Suzuka, Japón", "flag": "🇯🇵",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-03-27", "time": "04:30" },
+      "fp2": { "date": "2026-03-27", "time": "08:00" },
+      "fp3": { "date": "2026-03-28", "time": "04:30" },
+      "qualifying": { "date": "2026-03-28", "time": "08:00" },
+      "race": { "date": "2026-03-29", "time": "07:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 4, "round": 4, "name": "Bahrain Grand Prix", "nameEs": "Gran Premio de Baréin",
+    "circuit": "Bahrain International Circuit", "location": "Sakhir, Baréin", "flag": "🇧🇭",
+    "status": "suspended",
+    "sessions": {
+      "fp1": { "date": "2026-04-10", "time": "13:30" },
+      "fp2": { "date": "2026-04-10", "time": "17:00" },
+      "fp3": { "date": "2026-04-11", "time": "14:30" },
+      "qualifying": { "date": "2026-04-11", "time": "18:00" },
+      "race": { "date": "2026-04-12", "time": "17:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 5, "round": 5, "name": "Saudi Arabian Grand Prix", "nameEs": "Gran Premio de Arabia Saudí",
+    "circuit": "Jeddah Corniche Circuit", "location": "Jeddah, Arabia Saudí", "flag": "🇸🇦",
+    "status": "suspended",
+    "sessions": {
+      "fp1": { "date": "2026-04-17", "time": "15:30" },
+      "fp2": { "date": "2026-04-17", "time": "19:00" },
+      "fp3": { "date": "2026-04-18", "time": "15:30" },
+      "qualifying": { "date": "2026-04-18", "time": "19:00" },
+      "race": { "date": "2026-04-19", "time": "19:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 6, "round": 6, "name": "Miami Grand Prix", "nameEs": "Gran Premio de Miami",
+    "circuit": "Miami International Autodrome", "location": "Miami, USA", "flag": "🇺🇸",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-05-01", "time": "18:30" },
+      "sprintQualifying": { "date": "2026-05-01", "time": "22:30" },
+      "sprint": { "date": "2026-05-02", "time": "18:00" },
+      "qualifying": { "date": "2026-05-02", "time": "22:00" },
+      "race": { "date": "2026-05-03", "time": "22:00" }
+    },
+    "hasSprint": true, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 7, "round": 7, "name": "Canadian Grand Prix", "nameEs": "Gran Premio de Canadá",
+    "circuit": "Circuit Gilles Villeneuve", "location": "Montreal, Canadá", "flag": "🇨🇦",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-05-22", "time": "19:30" },
+      "sprintQualifying": { "date": "2026-05-22", "time": "23:00" },
+      "sprint": { "date": "2026-05-23", "time": "18:30" },
+      "qualifying": { "date": "2026-05-23", "time": "22:00" },
+      "race": { "date": "2026-05-24", "time": "20:00" }
+    },
+    "hasSprint": true, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 8, "round": 8, "name": "Monaco Grand Prix", "nameEs": "Gran Premio de Mónaco",
+    "circuit": "Circuit de Monaco", "location": "Montecarlo, Mónaco", "flag": "🇲🇨",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-06-05", "time": "13:30" },
+      "fp2": { "date": "2026-06-05", "time": "17:00" },
+      "fp3": { "date": "2026-06-06", "time": "12:30" },
+      "qualifying": { "date": "2026-06-06", "time": "16:00" },
+      "race": { "date": "2026-06-07", "time": "15:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 9, "round": 9, "name": "Spanish Grand Prix", "nameEs": "Gran Premio de España",
+    "circuit": "Circuit de Barcelona-Catalunya", "location": "Montmeló, España", "flag": "🇪🇸",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-06-12", "time": "13:30" },
+      "fp2": { "date": "2026-06-12", "time": "17:00" },
+      "fp3": { "date": "2026-06-13", "time": "12:30" },
+      "qualifying": { "date": "2026-06-13", "time": "16:00" },
+      "race": { "date": "2026-06-14", "time": "15:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 10, "round": 10, "name": "Austrian Grand Prix", "nameEs": "Gran Premio de Austria",
+    "circuit": "Red Bull Ring", "location": "Spielberg, Austria", "flag": "🇦🇹",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-06-26", "time": "13:30" },
+      "fp2": { "date": "2026-06-26", "time": "17:00" },
+      "fp3": { "date": "2026-06-27", "time": "12:30" },
+      "qualifying": { "date": "2026-06-27", "time": "16:00" },
+      "race": { "date": "2026-06-28", "time": "15:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 11, "round": 11, "name": "British Grand Prix", "nameEs": "Gran Premio de Gran Bretaña",
+    "circuit": "Silverstone Circuit", "location": "Silverstone, UK", "flag": "🇬🇧",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-07-03", "time": "13:30" },
+      "sprintQualifying": { "date": "2026-07-03", "time": "17:30" },
+      "sprint": { "date": "2026-07-04", "time": "12:00" },
+      "qualifying": { "date": "2026-07-04", "time": "16:00" },
+      "race": { "date": "2026-07-05", "time": "16:00" }
+    },
+    "hasSprint": true, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 12, "round": 12, "name": "Belgian Grand Prix", "nameEs": "Gran Premio de Bélgica",
+    "circuit": "Circuit de Spa-Francorchamps", "location": "Stavelot, Bélgica", "flag": "🇧🇪",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-07-17", "time": "12:30" },
+      "fp2": { "date": "2026-07-17", "time": "16:00" },
+      "fp3": { "date": "2026-07-18", "time": "11:30" },
+      "qualifying": { "date": "2026-07-18", "time": "16:00" },
+      "race": { "date": "2026-07-19", "time": "15:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 13, "round": 13, "name": "Hungarian Grand Prix", "nameEs": "Gran Premio de Hungría",
+    "circuit": "Hungaroring", "location": "Mogyoród, Hungría", "flag": "🇭🇺",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-07-24", "time": "13:30" },
+      "fp2": { "date": "2026-07-24", "time": "17:00" },
+      "fp3": { "date": "2026-07-25", "time": "12:30" },
+      "qualifying": { "date": "2026-07-25", "time": "16:00" },
+      "race": { "date": "2026-07-26", "time": "15:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 14, "round": 14, "name": "Dutch Grand Prix", "nameEs": "Gran Premio de Países Bajos",
+    "circuit": "Circuit Zandvoort", "location": "Zandvoort, Países Bajos", "flag": "🇳🇱",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-08-21", "time": "12:30" },
+      "sprintQualifying": { "date": "2026-08-21", "time": "16:30" },
+      "sprint": { "date": "2026-08-22", "time": "12:00" },
+      "qualifying": { "date": "2026-08-22", "time": "15:00" },
+      "race": { "date": "2026-08-23", "time": "15:00" }
+    },
+    "hasSprint": true, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 15, "round": 15, "name": "Italian Grand Prix", "nameEs": "Gran Premio de Italia",
+    "circuit": "Autodromo Nazionale Monza", "location": "Monza, Italia", "flag": "🇮🇹",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-09-04", "time": "13:30" },
+      "fp2": { "date": "2026-09-04", "time": "17:00" },
+      "fp3": { "date": "2026-09-05", "time": "12:30" },
+      "qualifying": { "date": "2026-09-05", "time": "16:00" },
+      "race": { "date": "2026-09-06", "time": "15:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 16, "round": 16, "name": "Madrid Grand Prix", "nameEs": "Gran Premio de España (Madrid)",
+    "circuit": "IFEMA Madrid Circuit", "location": "Madrid, España", "flag": "🇪🇸",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-09-11", "time": "13:30" },
+      "fp2": { "date": "2026-09-11", "time": "17:00" },
+      "fp3": { "date": "2026-09-12", "time": "12:30" },
+      "qualifying": { "date": "2026-09-12", "time": "16:00" },
+      "race": { "date": "2026-09-13", "time": "15:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 17, "round": 17, "name": "Azerbaijan Grand Prix", "nameEs": "Gran Premio de Azerbaiyán",
+    "circuit": "Baku City Circuit", "location": "Bakú, Azerbaiyán", "flag": "🇦🇿",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-09-24", "time": "10:30" },
+      "fp2": { "date": "2026-09-24", "time": "14:00" },
+      "fp3": { "date": "2026-09-25", "time": "10:30" },
+      "qualifying": { "date": "2026-09-25", "time": "14:00" },
+      "race": { "date": "2026-09-26", "time": "13:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 18, "round": 18, "name": "Singapore Grand Prix", "nameEs": "Gran Premio de Singapur",
+    "circuit": "Marina Bay Street Circuit", "location": "Singapur", "flag": "🇸🇬",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-10-09", "time": "11:30" },
+      "sprintQualifying": { "date": "2026-10-09", "time": "15:00" },
+      "sprint": { "date": "2026-10-10", "time": "11:30" },
+      "qualifying": { "date": "2026-10-10", "time": "19:00" },
+      "race": { "date": "2026-10-11", "time": "14:00" }
+    },
+    "hasSprint": true, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 19, "round": 19, "name": "United States Grand Prix", "nameEs": "Gran Premio de Estados Unidos",
+    "circuit": "Circuit of the Americas", "location": "Austin, USA", "flag": "🇺🇸",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-10-23", "time": "19:30" },
+      "fp2": { "date": "2026-10-23", "time": "23:00" },
+      "fp3": { "date": "2026-10-24", "time": "18:30" },
+      "qualifying": { "date": "2026-10-24", "time": "23:00" },
+      "race": { "date": "2026-10-25", "time": "21:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 20, "round": 20, "name": "Mexico City Grand Prix", "nameEs": "Gran Premio de México",
+    "circuit": "Autódromo Hermanos Rodríguez", "location": "Ciudad de México, México", "flag": "🇲🇽",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-10-30", "time": "20:30" },
+      "fp2": { "date": "2026-10-30", "time": "00:00" },
+      "fp3": { "date": "2026-10-31", "time": "19:30" },
+      "qualifying": { "date": "2026-10-31", "time": "23:00" },
+      "race": { "date": "2026-11-01", "time": "21:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 21, "round": 21, "name": "São Paulo Grand Prix", "nameEs": "Gran Premio de Brasil",
+    "circuit": "Autódromo José Carlos Pace", "location": "São Paulo, Brasil", "flag": "🇧🇷",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-11-06", "time": "15:30" },
+      "fp2": { "date": "2026-11-06", "time": "19:00" },
+      "fp3": { "date": "2026-11-07", "time": "14:30" },
+      "qualifying": { "date": "2026-11-07", "time": "19:00" },
+      "race": { "date": "2026-11-08", "time": "18:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 22, "round": 22, "name": "Las Vegas Grand Prix", "nameEs": "Gran Premio de Las Vegas",
+    "circuit": "Las Vegas Strip Circuit", "location": "Las Vegas, USA", "flag": "🇺🇸",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-11-19", "time": "01:30" },
+      "fp2": { "date": "2026-11-19", "time": "05:00" },
+      "fp3": { "date": "2026-11-20", "time": "01:30" },
+      "qualifying": { "date": "2026-11-20", "time": "05:00" },
+      "race": { "date": "2026-11-21", "time": "05:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 23, "round": 23, "name": "Qatar Grand Prix", "nameEs": "Gran Premio de Qatar",
+    "circuit": "Lusail International Circuit", "location": "Al Daayen, Qatar", "flag": "🇶🇦",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-11-27", "time": "14:30" },
+      "fp2": { "date": "2026-11-27", "time": "18:00" },
+      "fp3": { "date": "2026-11-28", "time": "13:30" },
+      "qualifying": { "date": "2026-11-28", "time": "19:00" },
+      "race": { "date": "2026-11-29", "time": "17:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  },
+  {
+    "id": 24, "round": 24, "name": "Abu Dhabi Grand Prix", "nameEs": "Gran Premio de Abu Dhabi",
+    "circuit": "Yas Marina Circuit", "location": "Abu Dhabi, UAE", "flag": "🇦🇪",
+    "status": "upcoming",
+    "sessions": {
+      "fp1": { "date": "2026-12-04", "time": "10:30" },
+      "fp2": { "date": "2026-12-04", "time": "14:00" },
+      "fp3": { "date": "2026-12-05", "time": "11:30" },
+      "qualifying": { "date": "2026-12-05", "time": "15:00" },
+      "race": { "date": "2026-12-06", "time": "14:00" }
+    },
+    "hasSprint": false, "raceResult": [], "sprintResult": []
+  }
+]
+  ]
+}
