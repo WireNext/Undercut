@@ -144,7 +144,7 @@
     {
       "id": 3, "round": 3, "name": "Japanese Grand Prix", "nameEs": "Gran Premio de Japón",
       "circuit": "Suzuka International Racing Course", "location": "Suzuka, Japón", "flag": "🇯🇵",
-      "status": "upcoming",
+      "status": "completed",
       "sessions": {
         "fp1": { "date": "2026-03-27", "time": "03:30" },
         "fp2": { "date": "2026-03-27", "time": "07:00" },
