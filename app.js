@@ -34,6 +34,7 @@ const T = {
     postponed_banner: '⏳ This race has been POSTPONED',
     dnf: 'DNF',
     dns: 'DNS',
+    dsq: 'DSQ',
     finished: 'Finished',
     next_race: 'NEXT RACE',
     sprint_weekend: 'Sprint Weekend',
@@ -74,6 +75,7 @@ const T = {
     postponed_banner: '⏳ Esta carrera ha sido APLAZADA',
     dnf: 'DNF',
     dns: 'DNS',
+    dsq: 'DSQ',
     finished: 'Finalizado',
     next_race: 'PRÓXIMA CARRERA',
     sprint_weekend: 'Fin de Semana Sprint',
@@ -370,16 +372,29 @@ function buildResultTable(results, type) {
   const rows = results.map(r => {
     const drv = DATA.drivers.find(d => d.id === r.driver);
     const team = DATA.teams.find(t => t.id === drv.team);
-    const pts = (r.status === 'finished') ? getPoints(r.position, type) :
-                (r.status === 'DNF' || r.status === 'DNS') ? 0 : getPoints(r.position, type);
-    const statusHTML = r.status === 'DNF'
-      ? `<span class="status-dnf">${t('dnf')}</span>`
-      : r.status === 'DNS'
-        ? `<span class="status-dns">${t('dns')}</span>`
-        : `<span class="status-finished">✓</span>`;
-    const posClass = r.position <= 3 ? `pos-${r.position}` : '';
+    
+    // Calculamos puntos (DSQ siempre 0)
+    const pts = (r.status === 'finished') ? getPoints(r.position, type) : 0;
+
+    // Lógica para etiquetas de estado y ocultar posición
+    let statusHTML = `<span class="status-finished">✓</span>`;
+    let displayPos = r.position; // Por defecto mostramos la posición
+
+    if (r.status === 'DNF') {
+      statusHTML = `<span class="status-dnf">${t('dnf')}</span>`;
+      displayPos = ''; // No mostrar posición
+    } else if (r.status === 'DNS') {
+      statusHTML = `<span class="status-dns">${t('dns')}</span>`;
+      displayPos = ''; // No mostrar posición
+    } else if (r.status === 'DSQ') {
+      statusHTML = `<span class="status-dsq" style="color:#e8002d; font-weight:bold;">${t('dsq')}</span>`;
+      displayPos = ''; // No mostrar posición
+    }
+
+    const posClass = (r.status === 'finished' && r.position <= 3) ? `pos-${r.position}` : '';
+    
     return `<tr class="${posClass}">
-      <td><span class="rt-pos">${r.position}</span></td>
+      <td><span class="rt-pos">${displayPos}</span></td> 
       <td>
         <div class="rt-driver">
           <div class="rt-team-bar" style="background:${team.color}"></div>
