@@ -225,7 +225,7 @@
         { "driver": "gasly", "position": 8, "status": "finished" },
         { "driver": "hadjar", "position": 9, "status": "finished" },
         { "driver": "colapinto", "position": 10, "status": "finished" },
-        { "driver": "bortoleto", "position": 20, "status": "DNF" },
+        { "driver": "bortoleto", "position": 20, "status": "DSQ" },
         { "driver": "ocon", "position": 11, "status": "finished" },
         { "driver": "bearman", "position": 12, "status": "finished" },
         { "driver": "sainz", "position": 13, "status": "finished" },

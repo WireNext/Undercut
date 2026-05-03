@@ -711,6 +711,9 @@ body {
 .status-dns { color: var(--text-3); font-family: var(--font-mono); font-size: 11px; font-weight: 600; }
 .status-finished { color: var(--text-3); font-size: 11px; }
 
+/* Status badge inline in driver cell — visible only on mobile */
+.rt-status-inline { display: none; }
+
 /* =============================================
    STANDINGS
    ============================================= */
@@ -1052,6 +1055,8 @@ html, body {
   .standings-chart { position: static; }
 }
 
+/* ── 768px and below ── */
+
 /* =============================================
    BOTTOM NAV BAR — Mobile only
    ============================================= */
@@ -1095,9 +1100,7 @@ html, body {
     -webkit-tap-highlight-color: transparent;
   }
 
-  .bottom-nav-btn:active {
-    background: var(--surface);
-  }
+  .bottom-nav-btn:active { background: var(--surface); }
 
   .bottom-nav-icon {
     font-size: 20px;
@@ -1105,9 +1108,7 @@ html, body {
     transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
-  .bottom-nav-btn.active .bottom-nav-icon {
-    transform: scale(1.15);
-  }
+  .bottom-nav-btn.active .bottom-nav-icon { transform: scale(1.15); }
 
   .bottom-nav-label {
     font-family: var(--font-mono);
@@ -1119,9 +1120,7 @@ html, body {
     transition: color var(--transition);
   }
 
-  .bottom-nav-btn.active .bottom-nav-label {
-    color: var(--accent);
-  }
+  .bottom-nav-btn.active .bottom-nav-label { color: var(--accent); }
 
   .bottom-nav-pip {
     position: absolute;
@@ -1134,21 +1133,14 @@ html, body {
     transition: opacity 0.2s ease;
   }
 
-  .bottom-nav-btn.active .bottom-nav-pip {
-    opacity: 1;
-  }
+  .bottom-nav-btn.active .bottom-nav-pip { opacity: 1; }
 }
 
-/* ── 768px and below ── */
 @media (max-width: 768px) {
 
   /* Add padding so content doesn't hide behind bottom nav */
-  .site-main {
-    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
-  }
-  .site-footer {
-    margin-bottom: calc(62px + env(safe-area-inset-bottom, 0px));
-  }
+  .site-main { padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
+  .site-footer { margin-bottom: calc(62px + env(safe-area-inset-bottom, 0px)); }
 
   /* Header: single clean row, no nav */
   .header-inner {
@@ -1165,9 +1157,7 @@ html, body {
   .header-right { padding-bottom: 0; }
 
   /* Hide desktop nav on mobile — use bottom nav instead */
-  .main-nav {
-    display: none;
-  }
+  .main-nav { display: none; }
 
   /* Layout */
   .site-main { padding: 20px 14px; }
@@ -1199,8 +1189,10 @@ html, body {
   /* Sessions grid */
   .sessions-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
 
-  /* Result table: hide team on mobile */
+  /* Result table: hide team and status columns on mobile — status shown inline in driver cell */
   .col-team { display: none; }
+  .col-status { display: none; }
+  .rt-status-inline { display: inline; margin-left: 4px; }
   .result-table td, .result-table th { padding: 8px 7px; }
   .rt-name { font-size: 12px; }
   .rt-short { font-size: 9px; }
@@ -1246,8 +1238,9 @@ html, body {
   .card-name { font-size: 18px; }
   .card-badges { flex-wrap: wrap; gap: 3px; }
 
-  /* Result table: also hide status on tiny screens */
+  /* Result table: hide status column on tiny screens — shown inline in driver cell instead */
   .col-status { display: none; }
+  .rt-status-inline { display: inline; margin-left: 4px; }
 
   /* Modal tabs scrollable */
   .modal-tabs {

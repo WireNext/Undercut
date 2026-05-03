@@ -138,7 +138,6 @@
 
   <script src="app.js"></script>
   <script>
-    // Sync bottom nav with top nav clicks
     (function() {
       const bottomBtns = document.querySelectorAll('.bottom-nav-btn');
       const topBtns = document.querySelectorAll('.nav-btn');
@@ -151,19 +150,14 @@
       bottomBtns.forEach(btn => {
         btn.addEventListener('click', () => {
           const section = btn.dataset.section;
-          // Trigger the same logic as top nav
-          topBtns.forEach(b => {
-            if (b.dataset.section === section) b.click();
-          });
+          topBtns.forEach(b => { if (b.dataset.section === section) b.click(); });
           syncActive(section);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         });
       });
 
       topBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          syncActive(btn.dataset.section);
-        });
+        btn.addEventListener('click', () => syncActive(btn.dataset.section));
       });
     })();
   </script>

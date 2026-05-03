@@ -400,7 +400,10 @@ function buildResultTable(results, type) {
           <div class="rt-team-bar" style="background:${team.color}"></div>
           <div>
             <div class="rt-name">${drv.name}</div>
-            <div class="rt-short">${drv.shortName} · ${drv.flag}</div>
+            <div class="rt-short">
+              ${drv.shortName} · ${drv.flag}
+              <span class="rt-status-inline">${statusHTML}</span>
+            </div>
           </div>
         </div>
       </td>
