@@ -206,7 +206,7 @@
     {
       "id": 6, "round": 6, "name": "Miami Grand Prix", "nameEs": "Gran Premio de Miami",
       "circuit": "Miami International Autodrome", "location": "Miami, USA", "flag": "🇺🇸",
-      "status": "upcoming",
+      "status": "completed",
       "sessions": {
         "fp1": { "date": "2026-05-01", "time": "18:30" },
         "sprintQualifying": { "date": "2026-05-01", "time": "22:30" },
