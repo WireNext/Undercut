@@ -1052,37 +1052,122 @@ html, body {
   .standings-chart { position: static; }
 }
 
+/* =============================================
+   BOTTOM NAV BAR — Mobile only
+   ============================================= */
+.bottom-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 300;
+    background: rgba(17, 17, 22, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border);
+    padding: 0 8px;
+    padding-bottom: env(safe-area-inset-bottom, 8px);
+    height: calc(62px + env(safe-area-inset-bottom, 0px));
+    align-items: stretch;
+    box-shadow: 0 -8px 32px rgba(0,0,0,0.45);
+  }
+
+  .bottom-nav-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 4px;
+    border-radius: 10px;
+    transition: background var(--transition);
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .bottom-nav-btn:active {
+    background: var(--surface);
+  }
+
+  .bottom-nav-icon {
+    font-size: 20px;
+    line-height: 1;
+    transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .bottom-nav-btn.active .bottom-nav-icon {
+    transform: scale(1.15);
+  }
+
+  .bottom-nav-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    transition: color var(--transition);
+  }
+
+  .bottom-nav-btn.active .bottom-nav-label {
+    color: var(--accent);
+  }
+
+  .bottom-nav-pip {
+    position: absolute;
+    top: 6px;
+    width: 28px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 0 0 3px 3px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .bottom-nav-btn.active .bottom-nav-pip {
+    opacity: 1;
+  }
+}
+
 /* ── 768px and below ── */
 @media (max-width: 768px) {
 
-  /* Header: stack logo+lang on row 1, nav on row 2 */
+  /* Add padding so content doesn't hide behind bottom nav */
+  .site-main {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+  }
+  .site-footer {
+    margin-bottom: calc(62px + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Header: single clean row, no nav */
   .header-inner {
-    height: auto;
-    flex-wrap: wrap;
-    padding: 10px 14px 0;
+    height: 54px;
+    flex-wrap: nowrap;
+    padding: 0 16px;
     gap: 0;
   }
 
-  .logo-wrap { flex: 1; padding-bottom: 10px; }
+  .logo-wrap { flex: 1; padding-bottom: 0; }
   .logo-season { display: none; }
   .logo-text { font-size: 22px; }
   .logo-icon { font-size: 18px; }
-  .header-right { padding-bottom: 10px; }
+  .header-right { padding-bottom: 0; }
 
-  /* Nav: full-width scrollable strip on second row */
+  /* Hide desktop nav on mobile — use bottom nav instead */
   .main-nav {
-    order: 3;
-    width: 100%;
-    border-top: 1px solid var(--border);
-    padding: 6px 0 8px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    gap: 2px;
-    flex-shrink: 0;
+    display: none;
   }
-  .main-nav::-webkit-scrollbar { display: none; }
-  .nav-btn { white-space: nowrap; font-size: 12px; padding: 6px 12px; flex-shrink: 0; }
 
   /* Layout */
   .site-main { padding: 20px 14px; }
